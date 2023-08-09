@@ -1,13 +1,13 @@
 <script lang="ts">
-	import robot_avatar from '$lib/assets/robot.png';
-	import julio_avatar from '$lib/assets/julio.jpg';
+	import robot_avatar from '$lib/assets/robot2.png';
+	import daniel_avatar from '$lib/assets/daniel.jpg';
 	import dots from '$lib/assets/dots.gif';
 	import type { Message } from '../types';
 	export let message: Message;
 </script>
 
 <div class="container {message.myself ? 'own-container' : ''}">
-	<img class="avatar" src={message.myself ? julio_avatar : robot_avatar} alt="avatar" />
+	<img class="avatar" src={message.myself ? daniel_avatar : robot_avatar} alt="avatar" />
 	<section class={message.myself ? 'message own-message' : 'message'}>
 		{#if message.loading}
 			<div><img width="50" src={dots} alt="typing" /></div>
